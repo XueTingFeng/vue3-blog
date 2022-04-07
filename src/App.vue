@@ -1,8 +1,12 @@
 <script setup>
 import { NAvatar } from 'naive-ui'
+import { NConfigProvider, NGlobalStyle, darkTheme } from 'naive-ui';
+darkTheme 
 </script>
 
 <template>
+<NConfigProvider :theme="darkTheme">
+<n-global-style />
   <n-avatar
   round
   size="small"
@@ -21,7 +25,7 @@ import { NAvatar } from 'naive-ui'
   <!-- 路由出口 -->
   <!-- 路由匹配到的组件将渲染在这里 -->
   <router-view></router-view>
-
+</NConfigProvider>
 </template>
 
 <style>
